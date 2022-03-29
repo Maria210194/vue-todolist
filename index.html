@@ -19,8 +19,17 @@
         <div class="container">
             <h1>TODO LIST</h1>
             <ul>
-                <li v-for="text in toDoItems">{{text}}</li>
+                <li v-for="(task, index) in toDoTasks" :class="task.done ? 'line-through' : '' ">
+
+                    <span @click="taskClicked(index)">{{task.text}}</span>
+
+                    <span @click="deleteTask(index)">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </span>
+                </li>
             </ul>
+            <input type="text" v-model="newTask" @keyUp.enter="addTask()" />
+            <button @click="addTask()">Add</button>
 
 
 

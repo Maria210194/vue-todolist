@@ -4,16 +4,44 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-  }
-  
-  body {
-    font-family: sans-serif;
-  }
-  
-  /* utilities */
- 
+}
 
-  
-  
-  
-  /* content */
+body {
+  font-family: sans-serif;
+}
+
+/* utilities */
+.container{
+  max-width: 1000px;
+  margin: 0px auto;
+}
+
+.container ul{
+  list-style-type: none;
+  padding: 20px;
+}
+
+.container h1{
+  text-align: center;
+  padding: 20px;
+}
+
+.container li{
+  background-color: beige;
+  border: 1px solid white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container li span{
+  cursor: pointer;
+}
+
+.line-through{
+  text-decoration: line-through;
+  color: #666;
+}
+
+
+/* content */
